@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Cats</h1>
+        <p>
+            <a href="{{ url_for('hello') }}">home</a>
+        </p>
+        <p>
+            <form action="{{ url_for('cats') }}" method="POST">
+                Cat name: <input type="text" name="name"><br>
+                Cat color: <input type="text" name="color"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </p>
+        <ul>
+        {% for cat in cats %}
+            <li>{{cat.name}} <i>{{cat.color}}</i></li>
+        {% endfor %}
+        <ul>
+    </body>
+</html>
