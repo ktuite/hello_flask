@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/ktuite/Desktop/shdh/cats.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/ktuite/apps/hello_flask/cats.db'
 db = SQLAlchemy(app)
 
 ### Models ###
